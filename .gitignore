@@ -2,4 +2,4 @@
 .coverage
 .pytest.cache
 *__pycache_
-venv/_
+venv/
