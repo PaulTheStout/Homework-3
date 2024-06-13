@@ -12,5 +12,5 @@ def mult(a: Decimal, b: Decimal) -> Decimal:
 
 def div(a: Decimal, b: Decimal) -> Decimal:
     if b == 0:
-        raise valueError("Error: Can't divide number by 0")
+        raise ValueError("Error: Can't divide number by 0")
     return a / b
