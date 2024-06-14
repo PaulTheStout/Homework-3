@@ -11,11 +11,13 @@ class History:
     """
     _history: List[CalculatorOper] = []
 
-    def add_calculation(self, calculation: CalculatorOper) -> None:
+
+    @classmethod
+    def add_calculation(cls, calculation: CalculatorOper) -> None:
         """
         Adds a new calculation to the history.
         """
-        self._history.append(calculation)
+        cls._history.append(calculation)
 
     def get_last(self) -> CalculatorOper:
         """
