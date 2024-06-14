@@ -3,7 +3,7 @@ This module manages the history of various calculations
 """
 
 from typing import List
-from calculator_oper import CalculatorOper
+from .calculator_oper import CalculatorOper
 
 class History:
     """

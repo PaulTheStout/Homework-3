@@ -4,9 +4,9 @@ Basic arithmetic calculator module
 
 from typing import Callable
 from decimal import Decimal
-from calculator_oper import CalculatorOper
-from history import History
-import operations
+from .operations import add, sub, mult, div
+from .history import History
+from .calculator_oper import CalculatorOper
 
 class Calculator:
     """
@@ -38,22 +38,22 @@ class Calculator:
         """
         Perform addition
         """
-        return self._perform_operation(num1, num2, operations.add, self._history)
+        return self._perform_operation(num1, num2, add, self._history)
 
     def sub(self, num1: Decimal, num2: Decimal) -> Decimal:
         """
         Perform subtraction
         """
-        return self._perform_operation(num1, num2, operations.sub, self._history)
+        return self._perform_operation(num1, num2, sub, self._history)
 
     def mult(self, num1: Decimal, num2: Decimal) -> Decimal:
         """
         Perform multiplication
         """
-        return self._perform_operation(num1, num2, operations.mult, self._history)
+        return self._perform_operation(num1, num2, mult, self._history)
 
     def div(self, num1: Decimal, num2: Decimal) -> Decimal:
         """
         Perform division
         """
-        return self._perform_operation(num1, num2, operations.div, self._history)
+        return self._perform_operation(num1, num2, div , self._history)
